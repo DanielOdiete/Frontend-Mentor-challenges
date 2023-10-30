@@ -1,0 +1,147 @@
+@font-face{
+    font-family: Myfont;
+    src:url(./assets/fonts/Roboto-Regular.ttf)
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Myfont, helvetica;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsl(234, 29%, 20%);
+}
+.card{
+    display: flex;
+    width: 800px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+}
+.right{
+    width: 60%;
+}
+.left{
+    width: 40%;
+}
+.left img{
+    width: 100%;
+    border-radius: 15px;
+}
+ul{
+    list-style: none; 
+    padding: 0px;   
+}  
+ul li{
+    background-image :url(./assets/images/icon-list.svg);
+    background-repeat: no-repeat;
+    min-height: 30px;
+    margin-bottom: 10px;
+    padding-left: 35px;
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+label{
+    margin-bottom: 15px;
+}
+input{
+    padding: 10px 20px;
+    font-family: inherit;
+    border-radius: 5px;
+    border: 2px solid #E8F0FE;
+    outline: none;
+    cursor: pointer;
+}
+input.error{
+     background-color: hsla(4, 100%, 67%, .2);
+     box-shadow: 0px 0px 0px 1px hsl(4, 100%, 67%);
+     color: hsl(4, 100%, 67%);
+     border: 1px solid hsl(4, 100%, 67%);
+}
+button{
+    font-family: inherit;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 15px 20px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: hsl(235, 18%, 26%);
+}
+button:hover{
+    background-color: hsl(4, 100%, 67%);
+    transition: all .2s;
+}
+button:focus {
+    outline: 2px solid transparent;
+}
+button:focus-visible{
+    box-shadow: 0px 0px 0px 3px hsl(4, 100%, 67%), 0px 0px 0px 6px hsla(4, 100%, 67%, .6);
+}
+
+h1{
+    font-size: 40px;
+}
+.hide{
+    display: none;
+}
+.card_2{
+    background-color: #fff;
+    width: 400px;
+    padding: 40px;
+    border-radius: 5px;
+}
+.card_2 h1{
+    font-size: 40px ;
+}
+.card_2 button{
+    width: 100%;
+}
+.form-labels{
+    display: flex;
+    justify-content: space-between;
+}
+#error-message{
+    color: red;
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px;
+}
+
+@media (max-width:768px) {
+    .card{
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 0;
+    }
+    body{
+        padding: 0;
+        margin: 0;
+    }
+    .card h1{
+        font-size: 30px;
+    }
+    .right{
+        width: 100%;
+        padding: 20px;
+    }
+    .left{
+        width: 100%;
+    }
+    .left img{
+        content:url(./assets/images/illustration-sign-up-mobile.svg)
+    }
+    form{
+        width: 90%;
+    }
+    .card_2{
+        min-height: 100vh;
+    }
+}
