@@ -127,6 +127,12 @@ function calculateDate() {
         output_day.textContent = ageDay;
     }
     else{
-        alert("error");
+        alert("All the fields are required!");
+        span_error1.classList.add('span-error');
+        input_day.classList.add('input-error');
+        span_error2.classList.add('span-error');
+        input_month.classList.add('input-error');
+        span_error3.classList.add('span-error');
+        input_year.classList.add('input-error');
     }
 };
